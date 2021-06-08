@@ -1,0 +1,33 @@
+<div class="panel panel-primary"  [ngStyle]="{'background-image': getUrl(),'height' : '498px', 'background-size' : 'cover'}">
+    <br><br>
+ <div class="table"> 
+   <h4>List of Courses...</h4><br>
+  <table class="table table-striped">
+    <thead class="table table-dark">
+    <tr>
+      <th scope="col">CourseId</th>
+      <th scope="col">CourseName</th>
+      <th scope="col">Eligibility</th>
+      <th scope="col">College</th>
+      <th scope="col">List of Branches</th>
+      <th scope="col">Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let sub of course" class="table table-light">
+      <td>{{sub.id}}</td>
+      <td>{{sub.courseName}}</td>
+      <td>{{sub.eligibility}}</td>
+      <td>{{sub.college}}</td>
+      <td><button type="button" class="btn btn-warning" (click)="goToBranchList(sub.id)">Click Me</button></td>
+      <td>
+          <button type="button" class="btn btn-danger">Remove</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <button type="button" class="btn btn-primary">Add New Courses</button>
+</div>
+</div>

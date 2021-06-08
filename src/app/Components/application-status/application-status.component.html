@@ -1,0 +1,25 @@
+<div class="panel panel-primary"  [ngStyle]="{'background-image': getUrl(),'height' : '512px', 'background-size' : 'cover'}">
+<div class="tab">
+    <br><h3>Application Status List..</h3><br>
+    <table class="table table-bordered">
+        <thead class="table table-primary">
+          <tr>
+            <th>Application Id</th>
+            <th>Appliaction Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table table-light" *ngFor="let val of appStatus">
+            <td>{{val.id}}</td>
+            <td>{{val.status}}</td>
+            <td>
+                <button type="button" class="btn btn-primary">Change Status</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <button type="button" class="btn btn-warning" (click)="confirm()">Apply Changes</button>
+</div>
+</div>

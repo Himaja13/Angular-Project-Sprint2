@@ -1,0 +1,62 @@
+<div class="panel panel-primary"  [ngStyle]="{'background-image': getUrl(),'height' : '700px', 'background-size' : 'cover'}">
+
+  <div class="col-md-6 offset-md-3">
+    <h4> Application Form </h4>
+    <form (ngSubmit) ="onSubmit()">
+    
+        <div class = "form-group">
+            <label>ApplicationId</label>
+            <input type="number" class="form-control" id="ApplicationId" name = "ApplicationId">
+        </div>
+        
+       
+        <div class = "form-group">
+            <label>ApplicantFullName</label>
+            <input type="text" class="form-control" id="ApplicantFullName" name = "ApplicantFullName">
+        </div>
+    
+        <div class = "form-group">
+            <label>ApplicantInterviewFeedback</label>
+            <input type="text" class="form-control" id="ApplicantInterviewFeedback" name = "ApplicantInterviewFeedback">
+        </div>
+       
+        <div class = "form-group">
+            <label>ApplicationStatus</label>
+            <input type="text" class="form-control" id="ApplicationStatus" name = "ApplicationStatus">
+        </div>
+        
+        
+        <div class = "form-group">
+            <label>DateOfBirth</label>
+            <input type="date" class="form-control" id="DateOfBirth" name = "DateOfBirth">
+        </div>
+    
+        <div class = "form-group">
+            <label>DateOfInterview</label>
+            <input type="date" class="form-control" id="DateOfInterview" name = "DateOfInterview">
+        </div>
+    
+        <div class = "form-group">
+            <label>Email</label>
+            <input type="email" class="form-control" id="Email" name = "Email">
+        </div>
+    
+        <div class = "form-group">
+            <label>FinalYearPercentage</label>
+            <input type="number" class="form-control" id="FinalYearPercentage" name = "FinalYearPercentage">
+        </div>
+    
+        <div class = "form-group">
+            <label>Goals</label>
+            <input type="text" class="form-control" id="Goals" name = "Goals">
+        </div>
+    
+        <div class = "form-group">
+            <label>HighestQualification</label>
+            <input type="text" class="form-control" id="HighestQualification" name = "HighestQualification">
+        </div>
+        
+        <button class ="btn btn-success" type="submit" (click)="onSubmit()">Submit</button>
+    </form>
+    </div>
+  </div>

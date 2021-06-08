@@ -1,0 +1,27 @@
+<div class="panel panel-primary"  [ngStyle]="{'background-image': getUrl(),'height' : '512px', 'background-size' : 'cover'}">
+    <div class="tab">
+        <br><h2>List of Documents..</h2><br>
+  <table class="table table-bordered">
+    <thead class="table table-warning">
+      <tr>
+        <th>DocumentId</th>
+        <th>DocumentName</th>
+        <th>DocumentUrl</th>
+        <th>ApplicantId</th>
+        <th>EmailId</th>
+        <th>DocumentStatus</th>
+      </tr>
+    </thead>
+    <tbody>
+       <tr class="table table-light" *ngFor="let val of documents">
+        <td>{{val.documentId}}</td>
+        <td>{{val.documentName}}</td>
+        <td>{{val.documentUrl}}</td>
+        <td>{{val.applicantId}}</td>
+        <td>{{val.emailId}}</td>
+        <td>{{val.documentStatus}}</td>
+      </tr> 
+    </tbody>
+  </table>
+    </div>
+</div>

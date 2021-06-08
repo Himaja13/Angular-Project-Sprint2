@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-sm bg-danger navbar-dark">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="adminDetails"><button type="button" class="btn btn-danger">AdminDetails</button></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="university"><button type="button" class="btn btn-danger">University</button></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="courses"><button type="button" class="btn btn-danger">Courses</button></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="students"><button type="button" class="btn btn-danger">Students</button></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="applicationStatus"><button type="button" class="btn btn-danger">ApplicationStatus</button></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="payments"><button type="button" class="btn btn-danger">Payments</button></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="documents"><button type="button" class="btn btn-danger">Documents</button></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="programs"><button type="button" class="btn btn-danger">Programs</button></a>
+      </li>
+      <div class="con">
+        <button type="button" class="btn btn-danger" (click)="goToHomePage()">Back</button>
+      </div>
+    </ul>
+  </nav>
+  <router-outlet></router-outlet>

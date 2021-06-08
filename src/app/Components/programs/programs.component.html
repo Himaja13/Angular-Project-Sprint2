@@ -1,0 +1,31 @@
+<div class="panel panel-primary"  [ngStyle]="{'background-image': getUrl(),'height' : '512px', 'background-size' : 'cover'}">
+<div class="tab">
+   <br> <h2>List of Programs..</h2><br>
+  <table class="table table-bordered">
+    <thead class="table table-warning">
+      <tr>
+        <th>Program Id</th>
+        <th>Program Name</th>
+        <th>Program Eligibility</th>
+        <th> Program Duration</th>
+        <th>DegreeOffered</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table table-danger" *ngFor="let val of program">
+          <td>{{val.programId}}</td>
+          <td>{{val.programName}}</td>
+          <td>{{val.programEligibility}}</td>
+          <td>{{val.programDuration}}</td>
+          <td>{{val.degreeOffered}}</td>
+          <td>
+            <button type="button" class="btn btn-danger">Remove</button>
+          </td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <button type="button" class="btn btn-success">Add</button>
+</div>
+</div>

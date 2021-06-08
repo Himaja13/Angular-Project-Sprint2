@@ -1,0 +1,50 @@
+<div class="panel panel-primary"  [ngStyle]="{'background-image': getUrl(),'height' : '700px', 'background-size' : 'cover'}">
+    <div class="col-md-6 offset-md-3">
+    <h4 text-align="center"> Payment Form </h4>
+    <form>
+    <div class = "form-group" name="PaymentId" [(ngModel)]="payments2.paymentId" [ngModelOptions]="{standalone: true}">
+        
+            <label>PaymentId</label>
+            <!-- <input type="number" class="form-control" id="PaymentId" name = "PaymentId"> -->
+            {{paymentId}}
+        </div>
+     
+        <div class = "form-group" >
+            
+            <label>EmailIdOfStudent</label>
+            <input type="email" class="form-control" id="email" name = "email" [(ngModel)]="payments2.emailIdOfStudent" [ngModelOptions]="{standalone: true}"
+            pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+            required = "required" minlength="3"> 
+
+         </div>
+        <!-- <div *ngIf="f.submitted && emailControl.errors!=null && emailControl.errors.required" class="error"
+                      style="color: red;">
+                      email is required
+                    </div>  -->
+        <div class = "form-group">
+            
+            <label>ApplicantionId</label>
+            <input type="number" class="form-control" id="ApplicantionId" name = "ApplicantionId"   [(ngModel)]="payments2.applicationId" [ngModelOptions]="{standalone: true}">
+        </div>
+    
+        <div class = "form-group" >
+            
+            <label>PaymentAmount</label>
+            <input type="number" class="form-control" id="PaymentAmount" name = "PaymentAmount"  [(ngModel)]="payments2.paymentAmount" [ngModelOptions]="{standalone: true}">
+        </div>
+       
+        <div class = "form-group">
+            
+            <label>PaymentDescription</label>
+            <input type="text" class="form-control" id="PaymentDescription" name = "PaymentDescription"  [(ngModel)]="payments2.paymentDescription" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class = "form-group">
+            <label>PaymentDate</label>
+            <input type="date" class="form-control" id="PaymentDate" name = "PaymentDate"   [(ngModel)]="payments2.paymentDate" [ngModelOptions]="{standalone: true}">
+            
+        </div>
+
+        <button class ="btn btn-success" type="submit" (click)="addPayment(payments2)">Submit</button>
+    </form>
+    </div>
+    </div>

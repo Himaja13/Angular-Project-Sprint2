@@ -1,0 +1,20 @@
+<div class="panel panel-primary"  [ngStyle]="{'background-image': getUrl(),'height' : '568px', 'background-size' : 'cover'}">
+ &nbsp; &nbsp; &nbsp;   <button type="button" class="btn btn-info" (click)="back()">Back</button>
+<br><br>
+<div class="table">
+    <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Branch Id</th>
+            <th>Branch Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of Branchlist">
+                <td>{{item.collegeRegId}}</td>
+                <td>{{item.collegeName}}</td>
+          </tr>
+        </tbody>
+    </table>
+</div>
+</div>

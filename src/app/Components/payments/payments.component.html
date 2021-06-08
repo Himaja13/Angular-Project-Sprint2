@@ -1,0 +1,27 @@
+<div class="panel panel-primary"  [ngStyle]="{'background-image': getUrl(),'height' : '512px', 'background-size' : 'cover'}">
+  <div class="tab"> 
+  <br><h2>Payments List..</h2> <br> 
+  <table class="table table-bordered">
+    <thead class="table table-light">
+      <tr>
+        <th>PaymentId</th>
+        <th>EmailIdOfStudent</th>
+        <th>ApplicationId</th>
+        <th>PaymentAmount</th>
+        <th>PaymentDescription</th>
+        <th>PaymentDate</th>
+        <th>PaymentStatus</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let val of payments" class="table table-success">
+        <td>{{val.paymentId}}</td>
+        <td>{{val.emailIdOfStudent}}</td>
+        <td>{{val.applicationId}}</td>
+        <td>{{val.paymentAmount}}</td>
+        <td>{{val.paymentDescription}}</td>
+        <td>{{val.paymentDate}}</td>
+        <td>{{val.paymentStatus}}</td>
+      </tr>
+  </table>
+</div></div>

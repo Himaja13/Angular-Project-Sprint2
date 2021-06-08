@@ -1,0 +1,34 @@
+<div class="panel panel-primary"  [ngStyle]="{'background-image': getUrl(),'height' : '512px', 'background-size' : 'cover'}">
+<br>
+<div class="tab">
+<h2>List of Universities..</h2>
+  <p>Use actions to Remove University. And use clickMe to view lists of colleges.</p> 
+
+<table class="table">
+    <thead class="table table-dark">
+      <tr>
+        <th>UniversityId</th>
+        <th>UniversityName</th>
+        <th>Address</th>
+        <th>CollegeList</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let val of universityList" class="table-success">
+        <td>{{val.universityId}}</td>
+        <td>{{val.name}}</td>
+        <td>{{val.address}}</td>
+        <td>
+            <button type="button" class="btn btn-primary" (click)="goToCollegeList(val.id)">Click Me</button>
+        </td>
+        <td>
+            <button type="button" class="btn btn-danger">Remove</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <button type="button" class="btn btn-success" (click)="goToAddOps()">Add New University</button>&nbsp;
+</div>
+</div>

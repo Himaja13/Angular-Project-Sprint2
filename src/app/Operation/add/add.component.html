@@ -1,0 +1,27 @@
+<div class="panel panel-primary"  [ngStyle]="{'background-image': getUrl(),'height' : '568px', 'background-size' : 'cover'}">
+
+<br><br><br>
+  <div class="form">
+    <form action="/action_page.php">
+        <div class="form-group">
+          <label for="id">Enter University Id</label>
+          <input type="number" class="form-control" placeholder="University Id" id="id">
+        </div>
+        <div class="form-group">
+          <label for="Name">Enter University Name</label>
+          <input type="text" class="form-control" placeholder="University Name" id="Name">
+        </div>
+        <div class="form-group">
+            <label for="Address">Enter Address of University</label>
+            <input type="text" class="form-control" placeholder="University Address" id="Address">
+          </div>
+          <div class="form-group">
+            <label for="College List">Enter College List</label>
+            <input type="text" class="form-control" placeholder="College List" id="College List">
+          </div>
+          <br>
+          <button type="submit" class="btn btn-primary" (click)="back()">Cancel</button>&nbsp;
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div>
+</div>
